@@ -11,18 +11,18 @@ namespace display
 		static RenderingContext2D ctx=new RenderingContext2D();
 		public  Graphics graphics=new Graphics();
 
-		// Update is called once per frame
-		void Update()
-		{
-			if (graphics.dirtyGraphics)
-			{
-				SetVerticesDirty();
-				SetMaterialDirty();
-				graphics.dirtyGraphics = false;
-			}
-		}
+        private void LateUpdate()
+        {
 
-		void renderGraphics(display.Graphics g, VertexHelper vh)
+            if (graphics.dirtyGraphics)
+            {
+                SetVerticesDirty();
+                SetMaterialDirty();
+                graphics.dirtyGraphics = false;
+            }
+        }
+
+        void renderGraphics(display.Graphics g, VertexHelper vh)
 		{
 			
 			var len = g.graphicsData.Count;
