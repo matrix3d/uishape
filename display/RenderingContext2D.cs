@@ -15,6 +15,7 @@ namespace display
 		{
 			//throw new NotImplementedException();
 			//Debug.Log("drawcurrentpath");
+			if (currentPath == null) return;
 			currentPath.getDrawable(this,vh);
 		}
 
