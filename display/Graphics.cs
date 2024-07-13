@@ -12,7 +12,7 @@ namespace display
 		public IGraphicsFill lastFill;
 		private List<GraphicsPath> pathPool = new List<GraphicsPath>();
 		private int pathPoolPos = 0;
-		private GraphicsPath lastPath;
+		public GraphicsPath lastPath;
 		//private Rect _bound;
 		//private var _rect:Rectangle;
 		//private var lockBound:Boolean = false;

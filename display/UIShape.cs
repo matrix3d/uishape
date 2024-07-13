@@ -33,9 +33,12 @@ namespace display
 			}
 			if (g.lastFill!=null || g.lastStroke!=null)
 			{
-				endFillInstance.fill = g.lastFill;
-				//endFillInstance._worldMatrix = g._worldMatrix;
-				endFillInstance.gldraw(ctx,vh);
+				if (g.lastPath != null)
+				{
+					endFillInstance.fill = g.lastFill;
+					//endFillInstance._worldMatrix = g._worldMatrix;
+					endFillInstance.gldraw(ctx, vh);
+				}
 			}
 		}
 
